@@ -1,0 +1,24 @@
+<phpunit bootstrap="tests/bootstrap.php"
+         colors="true">
+    <testsuites>
+        <testsuite name="all">
+            <directory suffix="Test.php">tests</directory>
+        </testsuite>
+    </testsuites>
+
+    // code coverage collecting
+
+    <coverage>
+        // Directory of code were testing
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+
+        // Format for report
+        <report>
+        <html outputDirectory="html-coverage" lowerUpperBound="80" highLowerBound="100"/>
+        </report>
+
+    </coverage>
+</phpunit>
+
