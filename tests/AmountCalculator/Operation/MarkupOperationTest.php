@@ -12,11 +12,11 @@ final class MarkupOperationTest extends TestCase
     /** @test */
     public function applyTo_WithMarkup_AddsPercentMarkup(): void
     {
-        // Instantiate class
+        // Instantiate class (test constructor or dependencies)
         $operation = new MarkupOperation(.25);
         // Call class method and pass Amount class as parameter
         $amount = $operation->applyTo(new Amount(100));
-        // Expected result
+        // Expected result of $amount
         self:self::assertEquals(new Amount(125), $amount);
     }
 
@@ -31,6 +31,8 @@ final class MarkupOperationTest extends TestCase
         new MarkupOperation($markup);
     }
 
+
+    // Data provider
     public function getInvalidMarkupValues()
     {
         return [

@@ -9,6 +9,7 @@ final class Amount
 {
     private int $cents;
 
+    // Can't instantiate with value below zero
     public function __construct(int $cents)
     {
         if ($cents < 0) {
